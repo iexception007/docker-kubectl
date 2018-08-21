@@ -1,6 +1,6 @@
 # kubectl running in docker.
 
-## 1. install kubectl
+## 1. install kubectl.
 ```bash
 cat >> /etc/yum.repos.d/kubernetes.repo <<EOF
 [kubernetes]
@@ -18,6 +18,10 @@ yum install -y kubectl
 /etc/kubernetes/admin.conf | /root/.kube/config
 
 
-
+## 3. version problem.
+```bash
+kubectl version  
+docker cp /usr/bin/kubectl ${instance_id}:/usr/bin
+```
 
 
